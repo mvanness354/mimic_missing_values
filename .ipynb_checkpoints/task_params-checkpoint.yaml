@@ -1,0 +1,71 @@
+mortality:
+    supmiwae:
+        n_classes: 2
+        n_input: 17
+        n_samples: 50
+    supnotmiwae:
+        n_classes: 2
+        n_input: 17
+        n_samples: 50
+    mlp:
+        n_classes: 2
+    neumiss:
+        n_input: 17
+        n_classes: 2
+        neumiss_depth: 10
+    gbt: {}
+    
+decomp:
+    supmiwae:
+        n_classes: 2
+        n_input: 17
+        n_samples: 50
+    supnotmiwae:
+        n_classes: 2
+        n_input: 17
+        n_samples: 50
+    mlp:
+        n_classes: 2
+    neumiss:
+        n_input: 17
+        n_classes: 2
+        neumiss_depth: 10
+    gbt: {}
+    
+los:
+    supmiwae:
+        n_classes: 10
+        n_input: 17
+        n_samples: 50
+    supnotmiwae:
+        n_classes: 10
+        n_input: 17
+        n_samples: 50
+    mlp:
+        n_classes: 10
+    neumiss:
+        n_input: 17
+        n_classes: 10
+        neumiss_depth: 10
+    gbt: {}
+    
+phenotyping:
+    supmiwae:
+        multilabel: True
+        n_out: 25
+        n_input: 17
+        n_samples: 50
+    supnotmiwae:
+        multilabel: True
+        n_out: 25
+        n_input: 17
+        n_samples: 50
+    mlp:
+        n_out: 25
+    neumiss:
+        multilabel: True
+        n_out: 25
+        n_input: 17
+        neumiss_depth: 10
+    gbt: {}
+    

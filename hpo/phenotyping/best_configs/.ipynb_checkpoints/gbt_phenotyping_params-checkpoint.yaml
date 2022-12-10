@@ -1,0 +1,4 @@
+learning_rate: 0.1
+max_bins: 255
+max_depth: 10
+max_leaf_nodes: 20
