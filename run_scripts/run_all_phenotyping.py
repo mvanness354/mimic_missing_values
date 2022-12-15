@@ -4,10 +4,10 @@ import csv
 
 seeds = list(range(10, 15))
 models = [
-    "mlp",
-    "neumiss",
+    # "mlp",
+    # "neumiss",
     # "supmiwae",
-    # "supnotmiwae",
+    "supnotmiwae",
     # "gbt",
 ]
 
