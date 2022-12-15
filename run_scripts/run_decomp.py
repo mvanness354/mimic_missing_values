@@ -14,7 +14,7 @@ from hypopt import GridSearch
 import keras_tuner
 
 import sys
-sys.path.append("../../")
+sys.path.append("../")
 from utils import get_tf_dataset
 from tf_models import MLPClassifier, NeuMissMLP, MLPMIWAE, MLPNotMIWAE
 
@@ -34,17 +34,17 @@ model_map = {
 }
 
 # Read in decomp data
-train_data = pd.read_csv("../../mimic/processed_data/decomp_tab_train.csv")
+train_data = pd.read_csv("../mimic/processed_data/decomp_tab_train.csv")
 train_X = train_data[[c for c in train_data.columns if c != "target"]].copy(deep=False)
 train_X = train_X[[c for c in train_X.columns if "full" in c and "mean" in c]]
 train_y = train_data["target"].copy(deep=False)
 
-val_data = pd.read_csv("../../mimic/processed_data/decomp_tab_val.csv")
+val_data = pd.read_csv("../mimic/processed_data/decomp_tab_val.csv")
 val_X = val_data[[c for c in val_data.columns if c != "target"]].copy(deep=False)
 val_X = val_X[[c for c in val_X.columns if "full" in c and "mean" in c]]
 val_y = val_data["target"].copy(deep=False)
 
-test_data = pd.read_csv("../../mimic/processed_data/decomp_tab_test.csv")
+test_data = pd.read_csv("../mimic/processed_data/decomp_tab_test.csv")
 test_X = test_data[[c for c in test_data.columns if c != "target"]].copy(deep=False)
 test_X = test_X[[c for c in test_X.columns if "full" in c and "mean" in c]]
 test_y = test_data["target"].copy(deep=False)

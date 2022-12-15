@@ -15,7 +15,7 @@ from hypopt import GridSearch
 import keras_tuner
 
 import sys
-sys.path.append("../../")
+sys.path.append("../")
 from utils import get_tf_dataset
 from tf_models import MLPMultiLabel, NeuMissMLP, MLPMIWAE, MLPNotMIWAE
 
@@ -35,17 +35,17 @@ model_map = {
 }
 
 # Read in data
-train_X = pd.read_csv("../../mimic/processed_data/phenotyping_tab_train.csv")
+train_X = pd.read_csv("../mimic/processed_data/phenotyping_tab_train.csv")
 train_X = train_X[[c for c in train_X.columns if "full" in c and "mean" in c]]
-train_y = pd.read_csv("../../mimic/processed_data/phenotyping_train_labels.csv")
+train_y = pd.read_csv("../mimic/processed_data/phenotyping_train_labels.csv")
 
-val_X = pd.read_csv("../../mimic/processed_data/phenotyping_tab_val.csv")
+val_X = pd.read_csv("../mimic/processed_data/phenotyping_tab_val.csv")
 val_X = val_X[[c for c in val_X.columns if "full" in c and "mean" in c]]
-val_y = pd.read_csv("../../mimic/processed_data/phenotyping_val_labels.csv")
+val_y = pd.read_csv("../mimic/processed_data/phenotyping_val_labels.csv")
 
-test_X = pd.read_csv("../../mimic/processed_data/phenotyping_tab_test.csv")
+test_X = pd.read_csv("../mimic/processed_data/phenotyping_tab_test.csv")
 test_X = test_X[[c for c in test_X.columns if "full" in c and "mean" in c]]
-test_y = pd.read_csv("../../mimic/processed_data/phenotyping_test_labels.csv")
+test_y = pd.read_csv("../mimic/processed_data/phenotyping_test_labels.csv")
 
 # Prepare dataset
 preprocessor = make_pipeline(
