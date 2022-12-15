@@ -13,4 +13,4 @@ The data for this project comes from [MIMIC-III](https://physionet.org/content/m
 
 1) Download the raw MIMIC-III data csvs from physionet, and store them in some directory. You will need to gain access to the raw data by completing the required training if not done already.
 2) Follow the steps in the mimic3-benchmark README through the "Train / validation split" step. This will generate train, validation, and test data for the 4 clinical tasks, but in raw panel data form. Note that this whole process will take several hours to get through all the steps.
-3) There are scripts named `mimic/make_processed_{taskname}_data.csv` to generate the tabular datasets from the raw time series data for each of the 4 tasks. Run each of these scripts to generate the corresponding csv files for each task.
+3) Make a new directory in `mimic/` called `processed_data`. There are scripts named `mimic/make_processed_{taskname}_data.csv` to generate the tabular datasets from the raw time series data for each of the 4 tasks. Run each of these scripts to generate the corresponding csv files for each task that will populate the `processed_data` directory.
